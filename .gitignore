@@ -1,0 +1,16 @@
+.DS_Store
+
+# Local planning / agent work notes. Keep these out of a public GitHub Pages repo.
+*.md
+!README.md
+
+# Raw photo source files and selection sheets.
+my picture/
+photo-selection/
+
+# Local OS / editor files.
+.vscode/
+.idea/
+*.swp
+*.tmp
+
