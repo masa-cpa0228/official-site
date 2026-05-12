@@ -234,7 +234,8 @@ select {
 }
 
 .fact-list,
-.simple-list {
+.simple-list,
+.explore-list {
   display: grid;
   gap: 16px;
   margin: 26px 0 0;
@@ -243,9 +244,29 @@ select {
 }
 
 .fact-list li,
-.simple-list li {
+.simple-list li,
+.explore-list li {
   padding-left: 18px;
   border-left: 3px solid var(--accent);
+}
+
+.explore-list li {
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.explore-list a {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: 6px;
+}
+
+.explore-list a::after {
+  content: " ->";
+  color: var(--accent);
+  margin-right: 4px;
 }
 
 .split-section {
@@ -324,6 +345,14 @@ select {
   grid-column: 1 / -1;
 }
 
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .field input,
 .field select,
 .field textarea {
@@ -342,6 +371,12 @@ select {
 
 .form-note {
   margin: 0;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 13px;
+}
+
+.note {
   color: var(--muted);
   font-family: var(--sans);
   font-size: 13px;

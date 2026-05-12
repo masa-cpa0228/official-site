@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="公認会計士・高橋正哉へのお問い合わせページ。社外役員、顧問、監査・ガバナンス、執筆・登壇等に関するご連絡はこちらからお願いいたします。">
+  <meta name="description" content="公認会計士・高橋正哉へのお問い合わせページ。会計監査、顧問、執筆・登壇、社外役員等に関するご連絡はこちらからお願いいたします。">
   <meta name="author" content="高橋正哉">
   <meta property="og:site_name" content="高橋正哉｜公認会計士">
   <meta property="og:type" content="website">
   <meta property="og:title" content="お問い合わせ｜高橋正哉">
-  <meta property="og:description" content="公認会計士・高橋正哉へのお問い合わせページ。社外役員、顧問、監査・ガバナンス、執筆・登壇等に関するご連絡はこちらからお願いいたします。">
+  <meta property="og:description" content="公認会計士・高橋正哉へのお問い合わせページ。会計監査、顧問、執筆・登壇、社外役員等に関するご連絡はこちらからお願いいたします。">
   <meta property="og:url" content="https://www.cpa-tm.com/contact.html">
   <meta property="og:image" content="https://www.cpa-tm.com/assets/img/portrait-candidate.jpg">
   <meta property="og:locale" content="ja_JP">
@@ -23,7 +23,6 @@
       <a class="site-title" href="index.html">高橋正哉｜公認会計士</a>
       <nav class="site-nav" aria-label="主要ナビゲーション">
         <a href="about.html">プロフィール</a>
-        <a href="board.html">社外役員</a>
         <a href="practice.html">業務領域</a>
         <a href="media.html">発信</a>
         <a href="contact.html" aria-current="page">お問い合わせ</a>
@@ -39,8 +38,8 @@
     <article class="content-container">
       <p class="eyebrow">Contact</p>
       <h1 class="page-title">お問い合わせ</h1>
-      <p class="lead">社外役員、顧問、監査・ガバナンスに関するご相談、執筆・登壇等のご連絡は、以下よりお願いいたします。内容を確認のうえ、必要に応じて返信いたします。</p>
-      <p>お問い合わせはフォームで受け付けます。送信内容は、確認用メールとして <code>takahashim@cpa-tm.com</code> に通知・転送される仕組みにします。</p>
+      <p class="lead">会計監査、顧問、執筆・登壇、社外役員に関するご相談・ご連絡は、以下よりお願いいたします。内容を確認のうえ、必要に応じて返信いたします。</p>
+      <p>お問い合わせはフォームで受け付けます。送信内容は、フォーム処理サービスを通じて確認用メールとして通知される仕組みにします。</p>
 
       <form class="contact-form" action="#" method="post" data-form-action-pending="true">
         <div class="form-grid">
@@ -64,10 +63,10 @@
             <span>ご相談またはご依頼の種別</span>
             <select name="topic">
               <option value="">選択してください</option>
-              <option>社外役員に関するご相談</option>
+              <option>会計監査に関するご相談</option>
               <option>顧問に関するご相談</option>
-              <option>監査・ガバナンスに関するご相談</option>
               <option>執筆・登壇に関するご相談</option>
+              <option>社外役員に関するご相談</option>
               <option>その他</option>
             </select>
           </label>
@@ -75,15 +74,15 @@
             <span>ご相談またはご依頼の概要</span>
             <textarea name="message" required></textarea>
           </label>
-          <label class="field full">
-            <span>希望時期</span>
-            <input type="text" name="preferred_timing">
+          <label class="field form-honeypot" aria-hidden="true">
+            <span>入力しないでください</span>
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
           </label>
         </div>
+        <p class="form-note">会計監査は、新月有限責任監査法人にて受嘱します。会計監査に関するご相談はその前提でご連絡ください。</p>
         <p class="form-note">内容によっては、お受けできない場合があります。監査独立性その他の職業倫理上の確認が必要な案件については、個別に確認いたします。</p>
         <button class="button" type="submit">送信する</button>
       </form>
-      <p class="last-updated">最終更新日：2026年5月10日</p>
     </article>
   </main>
 
