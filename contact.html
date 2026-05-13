@@ -143,11 +143,29 @@
           throw new Error("Form submission failed");
         }
 
+        const contentContainer = contactForm.closest(".content-container");
+        if (contentContainer) {
+          contentContainer.innerHTML = `
+            <section class="thanks-panel" aria-labelledby="contact-thanks-title">
+              <p class="eyebrow">Sent</p>
+              <h1 class="page-title" id="contact-thanks-title">お問い合わせを受け付けました</h1>
+              <p class="lead">ご入力いただいた内容は送信されました。内容を確認のうえ、必要に応じて返信いたします。</p>
+              <p>会計監査、社外役員、顧問その他のご相談については、職業倫理・独立性等の確認が必要となる場合があります。あらかじめご了承ください。</p>
+              <div class="thanks-actions" aria-label="次の移動先">
+                <a class="button" href="index.html">トップページへ</a>
+                <a class="text-link" href="contact.html">お問い合わせページへ戻る</a>
+              </div>
+            </section>
+          `;
+          contentContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+          return;
+        }
+
         contactForm.reset();
-        contactForm.hidden = true;
         contactForm.style.display = "none";
         contactForm.setAttribute("aria-hidden", "true");
         contactThanks.hidden = false;
+        contactThanks.style.display = "block";
         contactThanks.scrollIntoView({ behavior: "smooth", block: "start" });
       } catch (error) {
         contactStatus.textContent = "送信できませんでした。時間をおいて再度お試しください。";
