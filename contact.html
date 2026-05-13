@@ -145,6 +145,8 @@
 
         contactForm.reset();
         contactForm.hidden = true;
+        contactForm.style.display = "none";
+        contactForm.setAttribute("aria-hidden", "true");
         contactThanks.hidden = false;
         contactThanks.scrollIntoView({ behavior: "smooth", block: "start" });
       } catch (error) {
