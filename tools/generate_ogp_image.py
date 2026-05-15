@@ -4,7 +4,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "assets" / "img" / "ogp-default.png"
+OUT = ROOT / "assets" / "img" / "ogp-default.jpg"
 PORTRAIT = ROOT / "assets" / "img" / "portrait.jpg"
 
 W, H = 1200, 630
@@ -98,7 +98,10 @@ def main() -> None:
     draw.text((82, 556), "www.cpa-tm.com", font=body_small, fill=muted)
     draw.text((760, 580), "CPA / Governance / Capital Markets", font=body_small, fill=muted)
 
-    canvas.convert("RGB").save(OUT, quality=95, optimize=True)
+    # SNSプレビューを速く確実に表示させるため、写真主体のOGPはJPEGで軽量化する。
+    canvas.convert("RGB").save(
+        OUT, format="JPEG", quality=90, optimize=True, progressive=True
+    )
 
 
 if __name__ == "__main__":
