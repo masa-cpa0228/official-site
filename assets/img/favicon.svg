@@ -1,5 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="高橋正哉">
-  <rect width="64" height="64" fill="#f8f6f0"/>
-  <path d="M14 18h36v5H35v27h-6V23H14z" fill="#262521"/>
-  <path d="M15 44h34v5H15z" fill="#8a6a3f"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="高橋正哉｜公認会計士">
+  <rect width="256" height="256" fill="#f8f6f0"/>
+  <!-- M -->
+  <polygon points="30,196 30,64 58,64 90,150 122,64 150,64 150,196 122,196 122,112 100,176 80,176 58,112 58,196" fill="#262521"/>
+  <!-- T crossbar (conjoined with M right leg) -->
+  <rect x="140" y="64" width="58" height="28" fill="#262521"/>
+  <!-- T stem -->
+  <rect x="155" y="92" width="28" height="104" fill="#262521"/>
+  <!-- bronze flag: slanted slab at the bar's right end -->
+  <polygon points="198,64 230,64 216,92 184,92" fill="#8a6a3f"/>
 </svg>
