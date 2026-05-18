@@ -492,15 +492,15 @@ select {
 }
 
 .pullquote {
-  margin: clamp(40px, 6.5vw, 66px) 0;
-  padding: 6px 0 6px clamp(22px, 4vw, 34px);
+  margin: clamp(32px, 5vw, 52px) 0;
+  padding: 4px 0 4px clamp(20px, 3.4vw, 30px);
   border-left: 2px solid var(--accent);
   color: var(--text);
   font-family: var(--serif);
-  font-size: clamp(21px, 3vw, 30px);
+  font-size: clamp(18px, 2.4vw, 24px);
   font-weight: 700;
-  line-height: 1.75;
-  letter-spacing: 0.05em;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
 }
 
 .button {
@@ -675,5 +675,30 @@ select {
 @media (max-width: 860px) {
   .page-section {
     scroll-margin-top: 168px;
+  }
+}
+
+/* --- 文章が続く箇所のメリハリ（文字組みのみ／写真・装飾なし） --- */
+/* (1) 段落間の余白を最適化：本文の無名段落だけが対象（.lead/.note/.link-row/.pullquote 等は除外） */
+.content-container p:not([class]) {
+  margin: 1.5em 0 0;
+}
+
+/* (2) 各トピックの導入の一文を少しだけ大きく＝読み始めの足がかりを作る */
+.subsection-title + p {
+  font-size: clamp(16.5px, 1.7vw, 18px);
+  line-height: 1.85;
+  color: var(--text);
+}
+
+/* 見出し直後の最初の段落は詰めて、見出しと一体に見せる（後勝ちで margin-top を打ち消す） */
+.section-title + p:not([class]),
+.subsection-title + p:not([class]) {
+  margin-top: 0;
+}
+
+@media (max-width: 520px) {
+  .content-container p:not([class]) {
+    margin-top: 1.4em;
   }
 }
